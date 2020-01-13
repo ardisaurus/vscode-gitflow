@@ -26,7 +26,7 @@ $ git init
    ![Initializing Git Flow](res/Step1.png)
 
 4. Follow the command prompts and accept the defaults...
-   ![Defaults](res/defaults.PNG)
+   ![Defaults](res/defaults.png)
 
 5. Setup complete!
 
