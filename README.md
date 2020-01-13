@@ -20,12 +20,15 @@ $ git init
 ```
 
 2. Open the VS Code Source Control (Ctrl+Shift+G), Expand "GitFlow Actions Menu"
+
    ![Open Gitflow Action](res/Step0.png)
 
 3. Click "+" to Initialize repository for gitflow
+
    ![Initializing Git Flow](res/Step1.png)
 
 4. Follow the command prompts and accept the defaults...
+
    ![Defaults](res/defaults.png)
 
 5. Setup complete!
