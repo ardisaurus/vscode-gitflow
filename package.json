@@ -1,129 +1,246 @@
 {
-    "name": "gitflow",
-    "displayName": "gitflow",
-    "description": "Gitflow integration and support in Visual Studio Code",
-    "version": "1.2.1",
-    "publisher": "vector-of-bool",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/vector-of-bool/vscode-gitflow"
-    },
-    "bugs": {
-        "url": "https://github.com/vector-of-bool/vscode-gitflow/issues"
-    },
-    "homepage": "https://github.com/vector-of-bool/vscode-gitflow",
-    "keywords": [
-        "git",
-        "flow"
-    ],
-    "engines": {
-        "vscode": "^1.13.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "galleryBanner": {
-        "color": "#09585e",
-        "theme": "dark"
-    },
-    "icon": "res/icon_128.png",
-    "activationEvents": [
-        "*"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "gitflow.initialize",
-                "title": "Initialize repository for gitflow",
-                "category": "Gitflow"
-            },
-            {
-                "command": "gitflow.featureStart",
-                "title": "Feature: start",
-                "category": "Gitflow"
-            },
-            {
-                "command": "gitflow.featureRebase",
-                "title": "Feature: rebase",
-                "category": "Gitflow"
-            },
-            {
-                "command": "gitflow.featureFinish",
-                "title": "Feature: finish",
-                "category": "Gitflow"
-            },
-            {
-                "command": "gitflow.bugfixStart",
-                "title": "Bugfix: start",
-                "category": "Gitflow"
-            },
-            {
-                "command": "gitflow.bugfixRebase",
-                "title": "Bugfix: rebase",
-                "category": "Gitflow"
-            },
-            {
-                "command": "gitflow.bugfixFinish",
-                "title": "Bugfix: finish",
-                "category": "Gitflow"
-            },
-            {
-                "command": "gitflow.releaseStart",
-                "title": "Release: start",
-                "category": "Gitflow"
-            },
-            {
-                "command": "gitflow.releaseFinish",
-                "title": "Release: finish",
-                "category": "Gitflow"
-            },
-            {
-                "command": "gitflow.hotfixStart",
-                "title": "Hotfix: start",
-                "category": "Gitflow"
-            },
-            {
-                "command": "gitflow.hotfixFinish",
-                "title": "Hotfix: finish",
-                "category": "Gitflow"
-            }
-        ],
-        "configuration": {
-            "properties": {
-                "gitflow.deleteBranchOnFinish": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "After finishing a branch, delete the branch"
-                },
-                "gitflow.deleteRemoteBranches": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "If true, and `gitflow.deleteBranchOnFinish` is true, remote branches will be deleted when finishing a branch"
-                },
-                "gitflow.default.development": {
-                    "type": "string",
-                    "default": "develop",
-                    "description": "Default name for the development branch [develop]"
-                },
-                "gitflow.default.production": {
-                    "type": "string",
-                    "default": "master",
-                    "description": "Default name for the production branch [master]"
-                }
-            }
+  "name": "gitflow-actions-sidebar",
+  "displayName": "Gitflow Actions Sidebar",
+  "description": "Gitflow integration sidebar in Visual Studio Code",
+  "version": "0.1.0",
+  "publisher": "ardisaurus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ardisaurus/vscode-gitflow"
+  },
+  "bugs": {
+    "url": "https://github.com/ardisaurus/vscode-gitflow/issues"
+  },
+  "homepage": "https://github.com/ardisaurus/vscode-gitflow",
+  "keywords": [
+    "git",
+    "flow",
+    "gitflow",
+    "scm",
+    "source control",
+    "vcs",
+    "version control system"
+  ],
+  "engines": {
+    "vscode": "^1.13.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "galleryBanner": {
+    "color": "#09585e",
+    "theme": "dark"
+  },
+  "icon": "res/icon_128.png",
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "gitflow-actions.initialize",
+        "title": "Initialize repository for gitflow",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/add.svg",
+          "dark": "res/dark/add.svg"
         }
+      },
+      {
+        "command": "gitflow-actions.featureStart",
+        "title": "Feature: start",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/play.svg",
+          "dark": "res/dark/play.svg"
+        }
+      },
+      {
+        "command": "gitflow-actions.featureRebase",
+        "title": "Feature: rebase",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/refresh.svg",
+          "dark": "res/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "gitflow-actions.featureFinish",
+        "title": "Feature: finish",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/goal.svg",
+          "dark": "res/dark/goal.svg"
+        }
+      },
+      {
+        "command": "gitflow-actions.bugfixStart",
+        "title": "Bugfix: start",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/play.svg",
+          "dark": "res/dark/play.svg"
+        }
+      },
+      {
+        "command": "gitflow-actions.bugfixRebase",
+        "title": "Bugfix: rebase",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/refresh.svg",
+          "dark": "res/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "gitflow-actions.bugfixFinish",
+        "title": "Bugfix: finish",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/goal.svg",
+          "dark": "res/dark/goal.svg"
+        }
+      },
+      {
+        "command": "gitflow-actions.releaseStart",
+        "title": "Release: start",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/play.svg",
+          "dark": "res/dark/play.svg"
+        }
+      },
+      {
+        "command": "gitflow-actions.releaseFinish",
+        "title": "Release: finish",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/goal.svg",
+          "dark": "res/dark/goal.svg"
+        }
+      },
+      {
+        "command": "gitflow-actions.hotfixStart",
+        "title": "Hotfix: start",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/play.svg",
+          "dark": "res/dark/play.svg"
+        }
+      },
+      {
+        "command": "gitflow-actions.hotfixFinish",
+        "title": "Hotfix: finish",
+        "category": "Gitflow",
+        "icon": {
+          "light": "res/light/goal.svg",
+          "dark": "res/dark/goal.svg"
+        }
+      }
+    ],
+    "configuration": {
+      "properties": {
+        "gitflow-actions.deleteBranchOnFinish": {
+          "type": "boolean",
+          "default": true,
+          "description": "After finishing a branch, delete the branch"
+        },
+        "gitflow-actions.deleteRemoteBranches": {
+          "type": "boolean",
+          "default": true,
+          "description": "If true, and `gitflow-actions.deleteBranchOnFinish` is true, remote branches will be deleted when finishing a branch"
+        },
+        "gitflow-actions.default.development": {
+          "type": "string",
+          "default": "develop",
+          "description": "Default name for the development branch [develop]"
+        },
+        "gitflow-actions.default.production": {
+          "type": "string",
+          "default": "master",
+          "description": "Default name for the production branch [master]"
+        }
+      }
     },
-    "scripts": {
-        "vscode:prepublish": "./node_modules/typescript/bin/tsc -p ./",
-        "compile": "./node_modules/typescript/bin/tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install"
+    "views": {
+      "scm": [
+        {
+          "id": "gitflowActionsTreeview",
+          "name": "Gitflow Actions"
+        }
+      ]
     },
-    "devDependencies": {
-        "typescript": "^2.0.3",
-        "@types/node": "~7.0.31",
-        "mocha": "^3.2.0",
-        "@types/mocha": "^2.2.34",
-        "vscode": "^1.1.0"
+    "menus": {
+      "view/title": [
+        {
+          "command": "gitflow-actions.initialize",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "gitflow-actions.featureRebase",
+          "when": "viewItem == feature",
+          "group": "inline@1"
+        },
+        {
+          "command": "gitflow-actions.featureStart",
+          "when": "viewItem == feature",
+          "group": "inline@2"
+        },
+        {
+          "command": "gitflow-actions.featureFinish",
+          "when": "viewItem == feature",
+          "group": "inline@3"
+        },
+        {
+          "command": "gitflow-actions.bugfixRebase",
+          "when": "viewItem == bugfix",
+          "group": "inline@1"
+        },
+        {
+          "command": "gitflow-actions.bugfixStart",
+          "when": "viewItem == bugfix",
+          "group": "inline@2"
+        },
+        {
+          "command": "gitflow-actions.bugfixFinish",
+          "when": "viewItem == bugfix",
+          "group": "inline@3"
+        },
+        {
+          "command": "gitflow-actions.releaseStart",
+          "when": "viewItem == release",
+          "group": "inline@1"
+        },
+        {
+          "command": "gitflow-actions.releaseFinish",
+          "when": "viewItem == release",
+          "group": "inline@2"
+        },
+        {
+          "command": "gitflow-actions.hotfixStart",
+          "when": "viewItem == hotfix",
+          "group": "inline@1"
+        },
+        {
+          "command": "gitflow-actions.releaseFinish",
+          "when": "viewItem == hotfix",
+          "group": "inline@2"
+        }
+      ]
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "./node_modules/typescript/bin/tsc -p ./",
+    "compile": "./node_modules/typescript/bin/tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "@types/node": "~7.0.31",
+    "mocha": "^3.2.0",
+    "@types/mocha": "^2.2.34",
+    "vscode": "^1.1.0"
+  }
 }
