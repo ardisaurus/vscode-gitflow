@@ -14,16 +14,19 @@ gitflow commands from the Command Palette!
 ## Starting from Scratch
 
 1. First, initialize git:
+
 ```sh
 $ git init
 ```
-2. Open the VS Code Command Palette and type 'gitflow'
 
-3. Select 'Initialize repository for gitflow'
-![Initializing Git Flow](res/Step1.png)
+2. Open the VS Code Source Control (Ctrl+Shift+G), Expand "GitFlow Actions Menu"
+   ![Open Gitflow Action](res/Step0.png)
+
+3. Click "+" to Initialize repository for gitflow
+   ![Initializing Git Flow](res/Step1.png)
 
 4. Follow the command prompts and accept the defaults...
-![Defaults](res/defaults.PNG)
+   ![Defaults](res/defaults.PNG)
 
 5. Setup complete!
 
