@@ -2,7 +2,7 @@
   "name": "gitflow-actions-sidebar",
   "displayName": "Gitflow Actions Sidebar",
   "description": "Gitflow integration sidebar in Visual Studio Code",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "publisher": "ardisaurus",
   "repository": {
     "type": "git",
@@ -174,7 +174,8 @@
       "view/title": [
         {
           "command": "gitflow-actions.initialize",
-          "group": "navigation"
+          "group": "navigation",
+          "when": "view == gitflowActionsTreeview"
         }
       ],
       "view/item/context": [
@@ -224,7 +225,7 @@
           "group": "inline@1"
         },
         {
-          "command": "gitflow-actions.releaseFinish",
+          "command": "gitflow-actions.hotfixFinish",
           "when": "viewItem == hotfix",
           "group": "inline@2"
         }
