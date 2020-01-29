@@ -229,6 +229,52 @@
           "when": "viewItem == hotfix",
           "group": "inline@2"
         }
+      ],
+      "commandPalette": [
+        {
+          "command": "gitflow-actions.initialize",
+          "when": "false"
+        },
+        {
+          "command": "gitflow-actions.featureStart",
+          "when": "false"
+        },
+        {
+          "command": "gitflow-actions.featureRebase",
+          "when": "false"
+        },
+        {
+          "command": "gitflow-actions.featureFinish",
+          "when": "false"
+        },
+        {
+          "command": "gitflow-actions.bugfixStart",
+          "when": "false"
+        },
+        {
+          "command": "gitflow-actions.bugfixRebase",
+          "when": "false"
+        },
+        {
+          "command": "gitflow-actions.bugfixFinish",
+          "when": "false"
+        },
+        {
+          "command": "gitflow-actions.releaseStart",
+          "when": "false"
+        },
+        {
+          "command": "gitflow-actions.releaseFinish",
+          "when": "false"
+        },
+        {
+          "command": "gitflow-actions.hotfixStart",
+          "when": "false"
+        },
+        {
+          "command": "gitflow-actions.hotfixFinish",
+          "when": "false"
+        }
       ]
     }
   },
