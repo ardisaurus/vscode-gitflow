@@ -2,7 +2,7 @@
   "name": "gitflow-actions-sidebar",
   "displayName": "Gitflow Actions Sidebar",
   "description": "Gitflow integration sidebar in Visual Studio Code",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "publisher": "ardisaurus",
   "repository": {
     "type": "git",
