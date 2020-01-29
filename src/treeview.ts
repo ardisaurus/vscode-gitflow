@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import * as path from "path";
 
 export function buildTreeView(context: vscode.ExtensionContext) {
   const treeProvider = new ExampleTreeProvider();
@@ -23,10 +24,86 @@ export class ExampleTreeProvider
 
   constructor() {
     this.data = [
-      new TreeItem("Feature", "feature"),
-      new TreeItem("Bugfix", "bugfix"),
-      new TreeItem("Release", "release"),
-      new TreeItem("Hotfix", "hotfix")
+      new TreeItem("Feature", "feature", {
+        light: path.join(
+          __filename,
+          "..",
+          "..",
+          "..",
+          "res",
+          "light",
+          "feature.svg"
+        ),
+        dark: path.join(
+          __filename,
+          "..",
+          "..",
+          "..",
+          "res",
+          "dark",
+          "feature.svg"
+        )
+      }),
+      new TreeItem("Bugfix", "bugfix", {
+        light: path.join(
+          __filename,
+          "..",
+          "..",
+          "..",
+          "res",
+          "light",
+          "bugfix.svg"
+        ),
+        dark: path.join(
+          __filename,
+          "..",
+          "..",
+          "..",
+          "res",
+          "dark",
+          "bugfix.svg"
+        )
+      }),
+      new TreeItem("Release", "release", {
+        light: path.join(
+          __filename,
+          "..",
+          "..",
+          "..",
+          "res",
+          "light",
+          "release.svg"
+        ),
+        dark: path.join(
+          __filename,
+          "..",
+          "..",
+          "..",
+          "res",
+          "dark",
+          "release.svg"
+        )
+      }),
+      new TreeItem("Hotfix", "hotfix", {
+        light: path.join(
+          __filename,
+          "..",
+          "..",
+          "..",
+          "res",
+          "light",
+          "hotfix.svg"
+        ),
+        dark: path.join(
+          __filename,
+          "..",
+          "..",
+          "..",
+          "res",
+          "dark",
+          "hotfix.svg"
+        )
+      })
     ];
   }
 
@@ -41,14 +118,13 @@ export class ExampleTreeProvider
 class TreeItem extends vscode.TreeItem {
   children: TreeItem[] | undefined;
 
-  constructor(label: string, contextValue: string, children?: TreeItem[]) {
-    super(
-      label,
-      children === undefined
-        ? vscode.TreeItemCollapsibleState.None
-        : vscode.TreeItemCollapsibleState.Expanded
-    );
+  constructor(
+    label: string,
+    contextValue: string,
+    iconPath?: { light: string; dark: string }
+  ) {
+    super(label);
     this.contextValue = contextValue;
-    this.children = children;
+    this.iconPath = iconPath;
   }
 }
