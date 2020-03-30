@@ -7,7 +7,7 @@ and intends to be fully compatible with it.
 # Getting Started
 
 If you already have gitflow set up for your repository, just start execcuting
-gitflow commands from the Command Palette!
+gitflow commands from the Sidebar!
 
 ![Opening example](res/gitflow.png)
 
@@ -36,4 +36,4 @@ $ git init
 ### Note
 
 Development is ongoing. Please help support this project by trying it out
-and submitting issues and feature requests to [the github page](https://github.com/vector-of-bool/vscode-gitflow).
+and submitting issues and feature requests to [the github page](https://github.com/ardisaurus/vscode-gitflow).
